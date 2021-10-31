@@ -8,7 +8,7 @@ const clientConfig = {
 	entry: './src/index.tsx',
 	output: {
 		filename: 'main.js',
-		path: path.resolve(__dirname, 'build_output')
+		path: path.resolve(__dirname, 'dist')
 	},
 	module: {
 		rules: [
@@ -17,6 +17,9 @@ const clientConfig = {
 				use: 'ts-loader'
 			}
 		]
+	},
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js', '.json', '.css']
 	}
 };
 
@@ -36,6 +39,9 @@ const serverConfig = {
 				use: 'ts-loader'
 			}
 		]
+	},
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js', '.json', '.css']
 	}
 };
 
