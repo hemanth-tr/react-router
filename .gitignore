@@ -1,2 +1,4 @@
 # ignore unwanted file/folder from checking in to git repository
 node_modules
+build_output
+server.js

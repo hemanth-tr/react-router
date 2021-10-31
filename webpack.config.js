@@ -1,12 +1,14 @@
 const path = require('path');
+const { dirname } = require('path/posix');
 
 const clientConfig = {
 
 	name: 'client',
 	target: 'web',
-	entry: {
-		filename: 'index.ts',
-		path: path.resolve('src')
+	entry: './src/index.tsx',
+	output: {
+		filename: 'main.js',
+		path: path.resolve(__dirname, 'build_output')
 	},
 	module: {
 		rules: [
@@ -22,12 +24,10 @@ const serverConfig = {
 
 	name: 'server',
 	target: 'node',
-	entry: {
-		filename: 'server.ts',
-		path: path.resolve('server')
-	},
+	entry: './server/server.tsx',
 	output: {
-		filename: 'server.js'
+		filename: 'server.js',
+		path: __dirname
 	},
 	module: {
 		rules: [

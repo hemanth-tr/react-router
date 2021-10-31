@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "target": "ES3",
+        "jsx": "react-jsx"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
