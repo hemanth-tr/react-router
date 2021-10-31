@@ -1,0 +1,2 @@
+# ignore unwanted file/folder from checking in to git repository
+node_modules
